@@ -33,9 +33,9 @@ for city in CITIES:
 	 'city='+city,
 	 'country=Poland',
 	 'type=event',
-	 'fields=name%2C%20start_time%2Cend_time%2Cplace',
+	 'fields=name%2C%20start_time%2Cend_time%2Cplace%2Cdescription',
 	 'limit=99999999',
-	 'access_token=CAACEdEose0cBAFWdl51YCKY9skZBLHi8o4FQxi5K7GswiY44nB8mBuWZBETHgg8UPl0Y5IWsYZBPL3on1kDxbTmGHf0rOz6r1HwfxLZBv6NArvvKwBWFceQYJSeZC2JhGaBpLnGJCZBdkMNfkj492GRdwnvBLzqfJNzMsZASKFvn7XwP8ZBRuWhwjP66pi9Vi7H15UZAjRtmu0DZAKZAHte5DZC13GcgY0WMQ94ZD'
+	 'access_token=CAACEdEose0cBAIFsINEGKW9GFYiri6yAnmSwxBVQ9ZCMPfNZCVMGiSS8lhQdijzgXLgZCXBbagW7KnMaY0qUr930RmKJ9jRJnIX2zWMKQUzrBRYCpcZB9eoY4IS5FZB1lZABHMpbYpizpwE2PYGOVyzLZCzOUNZAmxd4or8FnahMYhvR69DffHOZCBi9fyC2SomDjlZAk9UtGa8PiELxghTBjCbhM4glrZB3ZCEZD'
 	]	
 
 	full_url = URL + '&'.join(params)

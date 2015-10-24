@@ -48,6 +48,37 @@ def search():
     res = es.search(index="fb_events", body=query)
     return jsonify(res['hits'])
 
+@app.route('/mobile/')
+def mobile():
+    distance = request.args.get('distance')
+    lat = request.args.get('lat')
+    lon = request.args.get('lon')
+
+
+    if not distance:
+        distance = "50"
+    if not lat: 
+    	lat = `19.9609909`
+    	lon = `50.0536804`
+
+        
+
+    #city_search = es.search(index="fb_events", body={"size":1, "query": {'match': {'city': city}}})
+    #pprint(city_search)
+    #city_cord = city_search['hits']['hits'][0]['_source']['place']['location']['geo_cord']
+    #pprint(city_search)
+    #city_cord = city_cord.split(',')
+    #print city_cord
+    distance += "km"
+    query = {
+        "size":100, "query": {
+            "filtered": {
+                "filter": { "geo_distance": { "distance": distance, "geo_cord": {"lat": lat,"lon": lon}}}
+            }
+       }
+    }
+    res = es.search(index="fb_events", body=query)
+    return jsonify(res['hits'])
 
 
 

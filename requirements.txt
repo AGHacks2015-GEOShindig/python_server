@@ -8,5 +8,5 @@ argparse==1.2.1
 elasticsearch==2.1.0
 itsdangerous==0.24
 six==1.10.0
-urllib3==1.12
+urllib3==1.24.2
 wsgiref==0.1.2
